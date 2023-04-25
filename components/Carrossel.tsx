@@ -21,7 +21,7 @@ export function Carrossel() {
             onClick={() =>
               step > 0 && step <= 3
                 ? setStep((current) => current - 1)
-                : setStep(4)
+                : setStep(3)
             }
             className="flex h-[50px] -mr-5 z-10 rounded-full py-4 px-4 bg-light"
           >

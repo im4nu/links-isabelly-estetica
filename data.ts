@@ -31,9 +31,9 @@ export const LinkCards = [
       logo: TelegramLogo,
       image: TelegramImage,
       name: "Instagram",
-      label: "+55 88 9961-7498",
+      label: "@Isabellyfreitas",
       bg: "telegram-card",
-      link: "#",
+      link: "https://t.me/+5588999617498",
     },
     {
       logo: WhatsLogo,
