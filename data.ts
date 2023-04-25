@@ -25,7 +25,7 @@ export const LinkCards = [
       name: "Instagram",
       label: "@isabelly_estetica2022",
       bg: "linkedin-card",
-      link: "#",
+      link: "https://www.linkedin.com/in/isabelly-freitas-189a4917b",
     },
     {
       logo: TelegramLogo,
