@@ -1,118 +1,83 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import { LinkCard } from "@/components/Card";
+import { LinkCards, Services } from "../data";
+import Image from "next/image";
+import { Carrossel } from "@/components/Carrossel";
+import ArrowRight from "../public/assets/icons/arrow-right.svg";
 
-const inter = Inter({ subsets: ['latin'] })
+import Avatar from "../public/assets/images/bell-avatar.png";
 
 export default function Home() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <main className="w-screen h-full gradient-main font-nunito">
+      <section>
+        {LinkCards.map((item) => (
+          <LinkCard
+            key={item.name}
+            title={item.name}
+            label={item.label}
+            bg={item.bg}
+            link={item.link}
+            icon={item.logo}
+            photo={item.image}
+          />
+        ))}
+      </section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
+      <section className="flex flex-col w-screen items-center text-center gap-6 mt-12">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          height={100}
+          width={100}
+          src={Avatar}
+          alt="Imagem de pergil Isabelly"
         />
-      </div>
+        <h1 className="font-main text-gray-900 text-3xl">Isabelly Freitas</h1>
+        <p className="font-light px-6">
+          {" "}
+          <span className="text-main font-main text-3xl">D</span> escubra uma
+          experiência única de relaxamento e rejuvenescimento em nosso ambiente
+          especialmente projetado para elevar sua saúde e bem-estar.
+        </p>
+        <Carrossel />
+      </section>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <section className="flex w-screen flex-col bg-service bg-no-repeat bg-cover items-center text-center -mt-16 py-32 gap-6">
+        <h2 className="px-6">
+          Trabalhamos com{" "}
+          <span className="text-main font-bold">
+            {" "}
+            agendamento e tratamentos presenciais{" "}
+          </span>
+        </h2>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        <div className="flex flex-col justify-start">
+          {Services.map((item) => (
+            <div key={item} className="flex my-2 gap-2">
+              <Image alt="Seta para direita" src={ArrowRight} />
+              <p>{item}</p>
+            </div>
+          ))}
+        </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
+        <p className="px-6">
+          {" "}
+          <span className="text-main font-bold">Agende agora</span> sua sessão e
+          sinta a diferença desde o primeiro momento.
+        </p>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        <button className="flex items-center bg-white text-main px-4 py-2 rounded-lg font-semibold">
+          Agendar Agora
+        </button>
+      </section>
+
+      <section className="w-screen justify-center items-center py-20">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.7268073553146!2d-39.280859524061945!3d-7.04135786899449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a3d3a8289529af%3A0xcda5cf981b191a2a!2sR.%20Zuli%20Morais%2C%201%20-%20Mte.%20Neco%2C%20Cariria%C3%A7u%20-%20CE%2C%2063220-000!5e0!3m2!1spt-BR!2sbr!4v1682386582101!5m2!1spt-BR!2sbr"
+          width="90%"
+          height="300"
+          loading="lazy"
+          style={{ borderRadius: 8, marginInline: "5%" }}
+        ></iframe>
+      </section>
     </main>
-  )
+  );
 }

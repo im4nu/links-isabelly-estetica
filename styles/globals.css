@@ -1,27 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
+html,
 body {
-  color: rgb(var(--foreground-rgb));
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.gradient-main {
+  background: linear-gradient(180deg, #ffffff 0%, #d2a5ed 100%);
+}
+.insta-card {
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    80.51deg,
+    #c63d58 48.43%,
+    rgba(37, 37, 37, 0) 87.77%
+  );
+}
+.linkedin-card {
+  background: linear-gradient(
+    80.51deg,
+    #252525 48.43%,
+    rgba(37, 37, 37, 0) 87.77%
+  );
+}
+.whatsapp-card {
+  background: linear-gradient(
+    80.51deg,
+    #05b547 48.43%,
+    rgba(37, 37, 37, 0) 87.77%
+  );
+}
+.telegram-card {
+  background: linear-gradient(
+    80.51deg,
+    #0088cc 48.43%,
+    rgba(37, 37, 37, 0) 87.77%
+  );
 }
