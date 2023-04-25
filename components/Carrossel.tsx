@@ -23,7 +23,7 @@ export function Carrossel() {
                 ? setStep((current) => current - 1)
                 : setStep(3)
             }
-            className="flex h-[50px] -mr-5 z-10 rounded-full py-4 px-4 bg-light"
+            className="flex h-[48px] -mr-5 z-10 rounded-full py-4 px-4 bg-light"
           >
             <FiArrowLeft size={16} color="#8F50B6" />
           </button>
@@ -53,7 +53,7 @@ export function Carrossel() {
                 ? setStep((current) => current + 1)
                 : setStep(0)
             }
-            className="flex bg-light h-[50px] -ml-5 z-10 rounded-full py-4 px-4"
+            className="flex bg-light h-[48px] -ml-5 z-10 rounded-full py-4 px-4"
           >
             <FiArrowRight size={16} color="#8F50B6" />
           </button>
