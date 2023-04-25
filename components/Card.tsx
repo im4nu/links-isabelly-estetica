@@ -30,7 +30,7 @@ export function LinkCard({
         </div>
       </div>
 
-      <Image className="h-full w-full" src={photo} alt={`${photo}`} />
+      <Image width={216} height={145} src={photo} alt={`${photo}`} />
 
       <div className={`absolute z-10 w-full h-[145px] ${bg}`} />
     </a>
