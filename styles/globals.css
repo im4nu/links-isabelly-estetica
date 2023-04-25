@@ -27,28 +27,28 @@ body {
 .insta-card {
   background: linear-gradient(
     80.51deg,
-    #c63d58 48.43%,
+    #c63d58 56.43%,
     rgba(37, 37, 37, 0) 87.77%
   );
 }
 .linkedin-card {
   background: linear-gradient(
     80.51deg,
-    #252525 48.43%,
+    #252525 56.43%,
     rgba(37, 37, 37, 0) 87.77%
   );
 }
 .whatsapp-card {
   background: linear-gradient(
     80.51deg,
-    #05b547 48.43%,
+    #05b547 56.43%,
     rgba(37, 37, 37, 0) 87.77%
   );
 }
 .telegram-card {
   background: linear-gradient(
     80.51deg,
-    #0088cc 48.43%,
+    #0088cc 56.43%,
     rgba(37, 37, 37, 0) 87.77%
   );
 }

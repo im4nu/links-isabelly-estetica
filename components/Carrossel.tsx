@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useState } from "react";
+import { lazy, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 
@@ -42,6 +42,7 @@ export function Carrossel() {
                 src={CarrosselImages[step] ?? "/assets/images/carrossel1.png"}
                 alt={"Imagem do carrossel"}
                 style={{ maxHeight: 329, borderRadius: 12 }}
+                loading="lazy"
               />
             </motion.div>
           </AnimatePresence>
