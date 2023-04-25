@@ -3,13 +3,13 @@ import { LinkCards, Services } from "../data";
 import Image from "next/image";
 import { Carrossel } from "@/components/Carrossel";
 import ArrowRight from "../public/assets/icons/arrow-right.svg";
-
+import ArrowTop from "../public/assets/icons/arrow-top.svg";
 import Avatar from "../public/assets/images/bell-avatar.png";
 
 export default function Home() {
   return (
     <main className="w-screen h-full gradient-main font-nunito">
-      <section>
+      <section id="home">
         {LinkCards.map((item) => (
           <LinkCard
             key={item.name}
@@ -81,6 +81,17 @@ export default function Home() {
           style={{ borderRadius: 8, marginInline: "5%" }}
         ></iframe>
       </section>
+
+      <div className="fixed bottom-8 right-8">
+        <a href="#home" className="flex bg-light rounded-full h-42 w-42 p-2">
+          <Image
+            alt="botão de retornar ao topo da página"
+            src={ArrowTop}
+            width={24}
+            height={24}
+          />
+        </a>
+      </div>
     </main>
   );
 }
