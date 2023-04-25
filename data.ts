@@ -23,7 +23,7 @@ export const LinkCards = [
       logo: LinkedinLogo,
       image: LinkedinImage,
       name: "Linkedin",
-      label: "@isabelly_estetica2022",
+      label: "isabelly-freitas-189a4917b",
       bg: "linkedin-card",
       link: "https://www.linkedin.com/in/isabelly-freitas-189a4917b",
     },
