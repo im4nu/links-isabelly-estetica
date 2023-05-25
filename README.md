@@ -3,8 +3,9 @@ Desenvolvido para dispositivos móveis apenas
 
 <a href="https://isabelly.vercel.app/">Clique aqui</a>
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+<br/>
+<br/>
 ## Getting Started
 
 First, run the development server:
