@@ -2,8 +2,9 @@
 Desenvolvido para dispositivos móveis apenas
 
 <a href="https://isabelly.vercel.app/">Clique aqui</a>
+<br/>
+<br/>
 ![image](https://github.com/im4nu/links-isabelly-estetica/assets/102077709/5f396e7c-a6c3-406a-bafd-1888ea96ac9d)
-
 <br/>
 <br/>
 ## Getting Started
