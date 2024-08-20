@@ -41,7 +41,7 @@ export const LinkCards = [
       name: "Whatsapp",
       label: "+55 88 9348-8775",
       bg: "whatsapp-card",
-      link: "https://api.whatsapp.com/send/?phone=5588999617498&text=Bem+vindo+ao+Centro+de+Est%C3%A9tica+Isabelly+Freitas+aguarde+que+jaja+eu+te+respondo+%EF%BF%BD%EF%BF%BD&type=phone_number&app_absent=0",
+      link: "https://api.whatsapp.com/send/?phone=558893488775&text=Bem+vindo+ao+Centro+de+Est%C3%A9tica+Isabelly+Freitas+aguarde+que+jaja+eu+te+respondo+%EF%BF%BD%EF%BF%BD&type=phone_number&app_absent=0",
     },
 ];
 
